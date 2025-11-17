@@ -22,29 +22,6 @@ A C++-based command-line news aggregation system that delivers personalized news
 6. **Data Persistence**: User profiles and news articles stored in text files
 7. **Sentiment Filtering**: Users can filter news by sentiment preference
 
-## Project Structure
-NewsAggregator/
-├── main.cpp # Main program entry point
-├── User.h # User management header
-├── User.cpp # User management implementation
-├── NewsManager.h # News management header
-├── NewsManager.cpp # News management implementation
-├── SentimentAnalyzer.h # Sentiment analysis header
-├── SentimentAnalyzer.cpp # Sentiment analysis implementation
-├── DisplayManager.h # UI management header
-├── DisplayManager.cpp # UI management implementation
-├── FileHandler.h # File operations header
-├── FileHandler.cpp # File operations implementation
-├── users.txt # User database
-└── news_data/ # News articles directory
-├── finance.txt
-├── sports.txt
-├── geopolitics.txt
-├── space_science.txt
-├── technology.txt
-├── health.txt
-└── entertainment.txt
-
 
 ## Requirements
 - C++11 compatible compiler (GCC, Clang, MSVC)
