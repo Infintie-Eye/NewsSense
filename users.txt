@@ -1,12 +1,4 @@
-USERNAME:Moulik
-PASSWORD:password_hash
-SENTIMENT:neutral
-----------------------------------------
-USERNAME:Moulik Khanna
-PASSWORD:password_hash
-SENTIMENT:neutral
-----------------------------------------
-USERNAME:Mk
+USERNAME:
 PASSWORD:password_hash
 SENTIMENT:neutral
 ----------------------------------------

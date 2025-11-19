@@ -7,6 +7,7 @@
 
 void DisplayManager::displayWelcome() {
     std::cout << "========================================" << std::endl;
+    std::cout << "         WELCOME TO Quick Bits          " << std::endl;
     std::cout << "  PERSONALIZED NEWS AGGREGATOR SYSTEM  " << std::endl;
     std::cout << "========================================" << std::endl;
     std::cout << std::endl;
@@ -19,7 +20,7 @@ void DisplayManager::displayLoginMenu() {
 }
 
 void DisplayManager::displayMainMenu() {
-    std::cout << "\nMAIN MENU:" << std::endl;
+    std::cout << "\nMAIN MENU: \n" << std::endl;
     std::cout << "1. View News" << std::endl;
     std::cout << "2. Update Preferences" << std::endl;
     std::cout << "3. View Profile" << std::endl;
@@ -42,7 +43,7 @@ void DisplayManager::displayNewsOptions() {
 }
 
 void DisplayManager::displayGoodbye() {
-    std::cout << "\nThank you for using the Personalized News Aggregator!" << std::endl;
+    std::cout << "\nThank you for using 'Quick Bits' Personalized News Aggregator!" << std::endl;
     std::cout << "Have a great day!" << std::endl;
 }
 

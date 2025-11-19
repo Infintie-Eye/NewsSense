@@ -20,16 +20,32 @@ void NewsManager::loadNewsFromFile(const std::string& category, const std::strin
     std::string line;
     NewsArticle currentArticle;
     bool readingContent = false;
+    bool hasArticleData = false;
     
     while (getline(file, line)) {
+        // Check for separator line (indicating end of article)
+        if (line.find("----------------------------------------") == 0) {
+            if (hasArticleData) {
+                // Save current article
+                newsDatabase[category].push_back(currentArticle);
+                currentArticle = NewsArticle();
+                readingContent = false;
+                hasArticleData = false;
+            }
+            continue; // Skip separator line
+        }
+                // Trim whitespace from the line
+        line.erase(0, line.find_first_not_of(" \t\r\n"));
+        line.erase(line.find_last_not_of(" \t\r\n") + 1);
         if (line.find("TITLE:") == 0) {
-            if (readingContent) {
+            if (hasArticleData) {
                 // Save previous article
                 newsDatabase[category].push_back(currentArticle);
                 currentArticle = NewsArticle();
                 readingContent = false;
             }
             currentArticle.title = line.substr(6);
+            hasArticleData = true;
         } 
         else if (line.find("TYPE:") == 0) {
             currentArticle.type = line.substr(5);
@@ -45,9 +61,13 @@ void NewsManager::loadNewsFromFile(const std::string& category, const std::strin
         } 
         else if (line.find("CONTENT:") == 0) {
             readingContent = true;
-            currentArticle.content = line.substr(8) + "\n";
+            currentArticle.content = line.substr(8);
+                        // Only add newline if there's actual content after "CONTENT:"
+            if (!currentArticle.content.empty()) {
+                currentArticle.content += "\n";
+            }
         } 
-        else if (readingContent) {
+        else if (readingContent && !line.empty()) {
             currentArticle.content += line + "\n";
         }
     }

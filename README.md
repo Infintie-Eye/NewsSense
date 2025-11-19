@@ -35,13 +35,13 @@ A C++-based command-line news aggregation system that delivers personalized news
 
 ## Compilation
 ```bash
-g++ -std=c++11 -o NewsAggregator main.cpp User.cpp NewsManager.cpp SentimentAnalyzer.cpp DisplayManager.cpp FileHandler.cpp 
+g++ -std=c++11 -o NewsSense main.cpp User.cpp NewsManager.cpp SentimentAnalyzer.cpp DisplayManager.cpp FileHandler.cpp 
 ```
 
 ## Usage
 1. Run the executable:
 ```bash
-./NewsAggregator
+./NewsSense
 ```
 2. Follow the on-screen instructions:
 - Login with existing credentials or register a new account
