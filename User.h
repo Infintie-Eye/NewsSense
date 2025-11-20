@@ -18,6 +18,7 @@ public:
     // Getters
     std::string getUsername() const;
     std::string getSentimentPreference() const;
+    std::string getPassword() const;  // Add this line
     
     // Setters
     void setSentimentPreference(const std::string& sentiment);

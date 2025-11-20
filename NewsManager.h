@@ -6,6 +6,22 @@
 #include <vector>
 #include <map>
 
+
+// struct NewsParagraph {
+//     std::string content;
+//     std::string sentiment;
+// };
+
+// struct NewsArticle {
+//     std::string title;
+//     std::string type;
+//     std::string author;
+//     std::string date;
+//     std::vector<NewsParagraph> paragraphs; // Multiple paragraphs with different sentiments
+//     std::string overallSentiment; // Main sentiment for filtering
+// };
+
+
 struct NewsArticle {
     std::string title;
     std::string type;

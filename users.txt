@@ -1,4 +1,4 @@
-USERNAME:
-PASSWORD:password_hash
+USERNAME:mk
+PASSWORD:123
 SENTIMENT:neutral
 ----------------------------------------

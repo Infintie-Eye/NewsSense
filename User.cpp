@@ -7,6 +7,7 @@ User::User(const std::string& uname, const std::string& pwd)
 
 std::string User::getUsername() const { return username; }
 std::string User::getSentimentPreference() const { return sentimentPreference; }
+std::string User::getPassword() const { return password; }
 
 void User::setSentimentPreference(const std::string& sentiment) {
     sentimentPreference = sentiment;
